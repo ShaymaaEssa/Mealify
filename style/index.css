@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 80%;
+    padding: 40px 5px;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+h2{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+    color: #37373f;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+/* navbar-style */
+.navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow:  0px 0px 14px 0px #0000001b;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5625rem 0.3125rem;
+    align-items: center;
+}
+
+.navbar .logo a{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: #212529;
+    font-size: 30px;
+}
+
+.navbar .logo a span{
+    color: #CE2F45;
+}
+
+.navbar .nav-menu{
+    display: none;
+}
+
+.navbar .nav-menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 10px;
+}
+
+
+.navbar .nav-menu a{
+    font-size:17px ;
+    font-weight: 600;
+    color: #7f7f90;
+    position: relative;
+    
+}
+
+.navbar .nav-menu a.active{
+    color:black;
+}
+/* Target-based styles */
+#section1:target ~ .navbar .nav-menu a[href="#home"],
+#section2:target ~ .navbar .nav-menu a[href="#chefs"],
+#section3:target ~ .navbar .nav-menu a[href="#gallery"],
+#section4:target ~ .navbar .nav-menu a[href="#contact"] {
+    color: black;
+    border-bottom: 2px solid #CE1212;
+}
+
+.navbar .nav-menu a::before{
+    content: "";
+    width:0px;
+    background-color: #CE1212;
+    position: absolute;
+    top:30px;
+    height: 2px;
+    
+}
+
+.navbar .nav-menu a:hover::before{
+    width: 100%;
+    transition: width 1s;
+}
+.navbar .nav-icons i{
+    color:#212529;
+    font-size: 25px;
+    padding:10px
+}
+
+/* home-start */
+.home{
+    /* height: 100vh; */
+    margin-top: 80px;
+    background-color: #EEEEEE;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.home .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.home .container .coverimg, 
+.home .container .content{
+    width: 100%;
+}
+
+.home .img:hover img{
+    transform: translateX(10px);
+    transform: translateY(10px);
+}
+.home .img img{
+    width: 100%;
+}
+
+
+
+
+.home h2{
+    max-width: 400px;
+    margin: auto;
+}
+.home p{
+    color: #4f4f5a;
+}
+
+.home .btn1{
+    background-color: #ce1212;
+    color: white;
+    padding:10px 25px;
+    border-radius: 20px 20px;
+    border-color: transparent;
+    margin-right: 15px;
+    transition: background-color 1s;
+}
+
+.home .btn1:hover{
+    background-color: #e61414;
+    
+}
+
+.home .div-btn2{
+    display: inline-block;
+    
+}
+
+.home .div-btn2:hover i{
+    color: #ce1212;
+}
+.home .div-btn2:hover span{
+    color: #ce1212;
+}
+
+.home .btn2{
+    color: #212529;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 900;
+    border:none;
+    
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+
+    transition: color 1s;
+
+}
+
+.home .btn2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-left: 5px solid red;
+    border-radius: 50% 0 0 50%;
+    background-color: transparent;
+    z-index: -1;
+  }
+
+
+.home .content div span{
+    font-size: 16px;
+    color: #212529;
+    font-weight: 600;
+    padding-left: 10px;
+    transition: color 1s;
+}
+/* home-end */
+
+/* chefs-start */
+.chefs{
+    background-color: white;
+}
+/* chefs-end */
